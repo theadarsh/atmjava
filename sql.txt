@@ -1,0 +1,10 @@
+create database atm;
+
+
+create table users(cno int primary key,name varchar(30),bal int,pin int);
+insert into users values(0987654321,'adarsh',10000,1234);
+
+
+create table transection(tid SERIAL,action varchar(15),amt int,dt timestamp,cno int references users);
+//insert into transection (action,amt,dt,cno)values('deposit',100,,0987654321);
+
